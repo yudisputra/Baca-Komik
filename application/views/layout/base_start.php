@@ -8,6 +8,7 @@
 
 		<!-- Bootstrap CSS -->
 		<link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
+		<link rel="shortcut icon" href="<?php echo base_url('assets/images/reading.png')?>" type="image/x-icon" />
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

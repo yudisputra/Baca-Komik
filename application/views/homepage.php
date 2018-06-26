@@ -106,7 +106,7 @@
 		<div class="panel panel-success">
 		<div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Latest Manga Updates</div>
 		<div class="panel-body">
-				<table id="example" class="table table-striped table-bordered" style="width:100%">
+				<table id="example" class="table table-responsive table-hover" style="width:100%">
 					<thead>
 						<tr>
 							<th>Kategori</th>

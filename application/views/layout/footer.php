@@ -57,7 +57,7 @@
 </div>
 <div class="panel panel-primary">
 	<div class="panel-heading">
-		<h3 class="panel-title text-center"> Request Manga | Contact Us</h3>
+		<h3 class="panel-title text-center"> <a href="<?php echo base_url('request.php') ?>">Request Manga </a> | <a href="<?php echo base_url('contact.php') ?>">Contact Us</a></h3>
 		<br>
 		<p class="text-center">Copyrights and trademarks for the manga,<br>
 			and other promotional materials are held by their respective owners and their use is allowed under the fair use clause of the

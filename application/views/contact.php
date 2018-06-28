@@ -1,1 +1,5 @@
-<?php $this->load->view('base_start');
+<?php $this->load->view('layout/base_start'); ?>
+
+
+
+<?php $this->load->view('layout/base_end'); ?>

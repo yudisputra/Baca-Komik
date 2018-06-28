@@ -21,5 +21,11 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('homepage');
+
+	}
+
+	public function oontact()
+	{
+		$this->load->view('contact');
 	}
 }

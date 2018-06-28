@@ -57,10 +57,10 @@
 </div>
 <div class="panel panel-primary">
 	<div class="panel-heading">
-		<h3 class="panel-title text-center"> <a href="<?php echo base_url('request.php') ?>">Request Manga </a> | <a href="<?php echo base_url('contact.php') ?>">Contact Us</a></h3>
+		<h3 class="panel-title text-center"> <a href="<?php echo base_url('request.php') ?>">Request Manga </a> | <a href="<?php echo base_url('welcome/contact'); ?>">Contact Us</a></h3>
 		<br>
 		<p class="text-center">Copyrights and trademarks for the manga,<br>
-			and other promotional materials are held by their respective owners and their use is allowed under the fair use clause of the
+			and other promotional materials are held by their respective owners and their use is allowed under the fair use clause of the <br>
 			Copyright Law. © 2018 Baca Komik</p>
 	</div>
 </div>

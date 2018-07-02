@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title text-center"> Home | Chapter Terbaru | Daftar Manga | Manga Terlaris</h3>
+			<h3 class="panel-title text-center"> Home | Chapter Terbaru | Daftar Manga | Manga Terlaris | <a href="<?php echo base_url('Welcome/contact'); ?>">Contact Us </a> </h3>
 		</div>
 		<div class="panel-body">
 			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -57,8 +57,6 @@
 </div>
 <div class="panel panel-primary">
 	<div class="panel-heading">
-		<h3 class="panel-title text-center"> <a href="<?php echo base_url('request.php') ?>">Request Manga </a> | <a href="<?php echo base_url('welcome/contact'); ?>">Contact Us</a></h3>
-		<br>
 		<p class="text-center">Copyrights and trademarks for the manga,<br>
 			and other promotional materials are held by their respective owners and their use is allowed under the fair use clause of the <br>
 			Copyright Law. © 2018 Baca Komik</p>

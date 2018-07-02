@@ -7,16 +7,21 @@
 		<link rel="shortcut icon" href="<?php echo base_url('assets/images/reading.png')?>" type="image/x-icon" />
 		<title>Baca Komik | Baca Komik Manga Terbaru</title>
 
-		<!-- Bootstrap CSS -->
-		<link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
-		<link href="<?php echo base_url('assets/css/dataTables.bootstrap.min.css ')?>" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  media="screen,projection"/>
+      	<link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+      	<!--JavaScript at end of body for optimized loading-->
+      	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+      	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+      	<script type="text/javascript" class="init">
+      	$(document).ready(function() {
+            $('#example').DataTable();
+        } );
+      	</script>
+      	
 		<style type="text/css">
 			body {
 				font-family: 'Segoe UI';

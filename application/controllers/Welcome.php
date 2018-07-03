@@ -33,4 +33,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('daftarManga');
 	}
+
+	public function chapterTerbaru()
+	{
+		$this->load->view('chapterTerbaru');
+	}
+
+	public function mangaTerlaris()
+	{
+		$this->load->view('mangaTerlaris');
+	}
 }

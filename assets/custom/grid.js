@@ -72,6 +72,12 @@ $(function() {
           type: "text",
           width: 50
         },
+         {
+          name: "cover",
+          title: "Alamat Cover",
+          type: "text",
+          width: 50
+        },
 
         { type: "control" }
       ]

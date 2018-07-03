@@ -1,7 +1,7 @@
 $(function() {
   $.ajax({
     type: "GET",
-    url: "getAll/"
+    url: "getAllkomik/"
   }).done(function(countries) {
     countries.unshift({ id: "0", name: "" });
 
@@ -21,7 +21,7 @@ $(function() {
         loadData: function(filter) {
           return $.ajax({
             type: "GET",
-            url: "getAll/",
+            url: "getAllkomik/",
             data: filter
           });
         },
@@ -35,7 +35,7 @@ $(function() {
         updateItem: function(item) {
           return $.ajax({
             type: "POST",
-            url: "update",
+            url: "update/",
             data: item
           });
         },
@@ -49,37 +49,29 @@ $(function() {
       },
       fields: [
         {
-          name: "id_penduduk",
-          title: "ID Penduduk",
+          name: "idkomik",
+          title: "ID Komik",
           type: "text",
           width: 50
         },
         {
-          name: "nik",
-          title: "NIK",
+          name: "namakomik",
+          title: "Nama Komik",
           type: "text",
           width: 150
         },
         {
-          name: "nama",
-          title: "Nama",
+          name: "pengarang",
+          title: "Pengarang",
           type: "text",
           width: 50
         },
         {
-          name: "tanggalLahir",
-          title: "Tanggal Lahir",
+          name: "status",
+          title: "Status",
           type: "text",
           width: 50
         },
-        {
-          name: "alamat",
-          title: "Alamat",
-          type: "text",
-          width: 50
-        },
-
-
 
         { type: "control" }
       ]

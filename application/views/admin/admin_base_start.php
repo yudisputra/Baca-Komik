@@ -11,7 +11,7 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
     <script src="<?php echo base_url()?>assets/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>assets/jsgrid/jsgrid.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>assets/custom/grid.js"></script>
+    
 </head>
 <body>
 
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('Admin/index'); ?>">Admin Komik</a></li>
-                <li><a href="<?php echo base_url('Admin/chapter'); ?>">Admin Chapter</a></li>
+                <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Admin Chapter</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

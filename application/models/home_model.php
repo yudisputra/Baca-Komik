@@ -23,6 +23,12 @@ class home_model extends CI_Model {
   		return $query->result();
 	}
 
+	public function mangaterbaru()
+	{
+		$query = $this->db->query("Select * from chapter as c INNER JOIN komik as k ON k.idkomik=c.fk_idkomik ORDER BY tanggalrilis");
+		return $query->result();
+	}
+
 }
 
 /* End of file modelName.php */

@@ -23,6 +23,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('home_model');
 		$data["komik"] = $this->home_model->index();
+		$data["chapter"] = $this->home_model->mangaterbaru();
 		$this->load->view('homepage',$data);
 	}
 

@@ -48,19 +48,24 @@
 				<table id="example" class="table table-responsive table-hover" style="width:100%">
 					<thead>
 						<tr>
-							<th>Kategori</th>
-							<th>Judul</th>
-							<th>Status</th>
+							<th>Nama Komik</th>
+							<th>Judul Chapter</th>
+							<th>Volume Chapter</th>
 							<th>Tanggal Rilis</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Komik</td>
-							<td>Naruto Episode 12 Sub Indonesia</td>
-							<td>Belum Tamat</td>
-							<td>Hari ini</td>
-						</tr>
+						<?php foreach ($chapter as $key) { ;?>
+			            <tr>
+			            	<td><?php echo $key->namakomik ?></td>
+			                <td><?php echo $key->judulchapter?></td>
+			                <td><?php echo $key->volchapter?></td>
+			                <td><?php echo $key->tanggalrilis?></td>
+			                <td><a href="#"><button type="button" class="btn btn-default" aria-label="Left Align">
+								<span class="glyphicon glyphicon-book" aria-hidden="true"></span> Baca Komik </button></a></td>
+			            </tr>
+			            <?php } ?>
 					</tbody>
 				</table>
 			</div>

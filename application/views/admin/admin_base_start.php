@@ -11,6 +11,11 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
     <script src="<?php echo base_url()?>assets/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>assets/jsgrid/jsgrid.min.js"></script>
+    <style type="text/css">
+            body {
+                font-family: 'Segoe UI';
+            }
+        </style>
     
 </head>
 <body>

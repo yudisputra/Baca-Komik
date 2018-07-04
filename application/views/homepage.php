@@ -30,7 +30,7 @@
 						<div class="caption">
 							<a href="<?php echo base_url()?>/welcome/detail/<?php echo $key->idkomik ?>">
 							<center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
-							<p align="center"><?php echo $key->namakomik ?></p></a>
+							<h5 align="center"><?php echo $key->namakomik ?></h5></a>
 						</div>
 				</div>
 			</div>
@@ -69,4 +69,4 @@
 </div>
 </div>
 
-<?php $this->load->view('layout/base_end');?>
+<?php $this->load->view('layout/footer');?>

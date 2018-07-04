@@ -17,7 +17,6 @@
 				<li><a href="<?php echo base_url('welcome'); ?>">Home</a></li>
 				<li><a href="<?php echo base_url('welcome/chapterTerbaru'); ?>">Chapter Terbaru</a></li>
 				<li><a href="<?php echo base_url('welcome/daftarManga'); ?>">Daftar Manga</a></li>
-				<li><a href="<?php echo base_url('welcome/mangaTerlaris'); ?>">Manga Terlaris</a></li>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">

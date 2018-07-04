@@ -9,6 +9,13 @@ class home_model extends CI_Model {
   		 return $query->result();
 	}
 
+	public function detail($id)
+	{
+ 		 $this->db->where('idkomik', $id);
+ 		 $query = $this->db->get('komik');
+  		return $query->result();
+	}
+
 }
 
 /* End of file modelName.php */

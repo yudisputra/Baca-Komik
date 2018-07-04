@@ -6,7 +6,7 @@ $(function() {
     countries.unshift({ id: "0", name: "" });
 
     $("#jsGrid").jsGrid({
-      height: "300px",
+      height: "30px",
       width: "100%",
       filtering: true,
       inserting: true,
@@ -58,7 +58,7 @@ $(function() {
           name: "namakomik",
           title: "Nama Komik",
           type: "text",
-          width: 150
+          width: 50
         },
         {
           name: "pengarang",

@@ -37,8 +37,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="">Daftar</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="<?php echo base_url('welcome/index'); ?>">Log Out</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

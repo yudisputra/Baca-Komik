@@ -27,67 +27,38 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				<h5>Comic Name : <?php echo $key->namakomik?></h5>
-				<h5>Author : <?php echo $key->pengarang?></h5>
-				<h5>Status : <?php echo $key->status?></h5>
+				<h4>Comic Name : <?php echo $key->namakomik?></h5>
+				<h4>Author : <?php echo $key->pengarang?></h5>
+				<h4>Status : <?php echo $key->status?></h5>
 				<p>Ringkasan : <?php echo $key->ringkasan?></p>
 			</div>
 		<?php } ?>
+        <br>
 		 <table id="example" class="table table-responsive table-hover">
         <thead>
             <tr>
-                <th>Name</th>
                 <th>Chapter</th>
+                <th>Judul</th>
                 <th>Release date</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
+            <?php foreach ($chapter as $key) { ;?>
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>2008/11/28</td>
+                <td><?php echo $key->volchapter?></td>
+                <td><?php echo $key->judulchapter?></td>
+                <td><?php echo $key->tanggalrilis?></td>
+                <td><a href="#">Baca</a>
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>2008/11/28</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>2008/11/28</td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>2008/11/28</td>
-            </tr>
-            <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td>2008/11/28</td>
-            </tr>
-            <tr>
-                <td>Brielle Williamson</td>
-                <td>Integration Specialist</td>
-                <td>2008/11/28</td>
-            </tr>
-            <tr>
-                <td>Herrod Chandler</td>
-                <td>Sales Assistant</td>
-                <td>2008/11/28</td>
-            </tr>
-            <tr>
-                <td>Rhona Davidson</td>
-                <td>Integration Specialist</td>
-                <td>2008/11/28</td>
-            </tr>
+            <?php } ?>
         </tbody>
         <tfoot>
             <tr>
                 <th>Name</th>
                 <th>Chapter</th>
                 <th>Release date</th>
+                <th>Action</th>
             </tr>
         </tfoot>
     </table>

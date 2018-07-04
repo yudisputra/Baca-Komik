@@ -33,6 +33,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('Admin/index'); ?>">Admin Komik</a></li>
                 <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Admin Chapter</a></li>
+                <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Komik</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

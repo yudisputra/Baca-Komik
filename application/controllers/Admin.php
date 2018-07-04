@@ -36,4 +36,22 @@ class Admin extends CI_Controller {
         $this->load->model('admin_model'); 
         $this->admin_model->update();
     }
+
+    public function create()
+    {
+        $this->load->model('admin_model');
+        $this->form_validation->set_rules('namakomik','Nama Komik','trim|required');
+        $this->form_validation->set_rules('pengarang', 'Pengarang', 'trim|required');
+        $this->form_validation->set_rules('status', 'Status', 'trim|required');
+
+        if($this->form_validation->run()==FALSE)
+        {
+            $this->load->view('admin/admin_tambahkomik');
+        }
+        else
+        {
+            $this->admin_model->insertkomik();
+            $this->load->view('admin/admin_komik');
+        }
+    }
 }

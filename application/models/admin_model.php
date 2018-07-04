@@ -31,4 +31,10 @@ class admin_model extends CI_Model {
         $this->db->where('idkomik', $id); 
         $this->db->delete('komik');
     }
+
+    public function insertkomik()
+    {
+         $object = array('idkomik' => $this->input->post('idkomik'), 'namakomik' => $this->input->post('namakomik'), 'pengarang' => $this->input->post('pengarang'),'status' => $this->input->post('status'),'ringkasan' => $this->input->post('ringkasan'));
+         $this->db->insert('komik', $object);
+    }
 }

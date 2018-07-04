@@ -50,8 +50,25 @@ class Admin extends CI_Controller {
         }
         else
         {
-            $this->admin_model->insertkomik();
-            $this->load->view('admin/admin_komik');
+            $config['upload_path']      = './assets/images/cover';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']     = 100000000;
+            $config['max_width']        = 10240;
+            $config['max_height']       = 7680;
+
+            $this->load->library('upload',$config);
+
+            if(!$this->upload->do_upload('cover'))
+            {
+                $error = array('error'=> $this->upload->display_errors());
+                $this->load->view('admin/admin_tambahkomik',$error);
+            }
+
+            else
+            {
+                $this->admin_model->insertkomik();
+                $this->load->view('admin/admin_komik');
+            }
         }
     }
 }

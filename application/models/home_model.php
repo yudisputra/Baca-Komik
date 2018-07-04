@@ -3,10 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class home_model extends CI_Model {
 
-	public function list()
+	public function index()
 	{
  		 $query = $this->db->get('komik');
   		 return $query->result();
+	}
+
+	public function detail($id)
+	{
+ 		 $this->db->where('idkomik', $id);
+ 		 $query = $this->db->get('komik');
+  		return $query->result();
 	}
 
 }

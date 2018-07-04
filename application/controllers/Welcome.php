@@ -18,11 +18,19 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
 	public function index()
 	{
 		$this->load->model('home_model');
-		$data["komik"] = $this->home_model->list();
+		$data["komik"] = $this->home_model->index();
 		$this->load->view('homepage',$data);
+	}
+
+	public function detail($id)
+	{
+		$this->load->model('home_model');
+		$data["komik"] = $this->home_model->detail($id);
+		$this->load->view('homepagedetail',$data);
 	}
 
 	public function contact()
@@ -44,4 +52,6 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('mangaTerlaris');
 	}
+
+
 }

@@ -6,7 +6,7 @@ $(function() {
     countries.unshift({ id: "0", name: "" });
 
     $("#jsGrid").jsGrid({
-      height: "30px",
+      height: "500px",
       width: "100%",
       filtering: true,
       inserting: true,

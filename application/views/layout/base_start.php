@@ -19,7 +19,7 @@
       	<script type="text/javascript" class="init">
       	$(document).ready(function() {
             $('#example').DataTable();
-        } );
+        });
       	</script>
       	
 		<style type="text/css">

@@ -23,79 +23,19 @@
 		         <input type="text" class="form-control" id="inputSuccess5" placeholder="Search your manga ...">
 		         <span class="glyphicon glyphicon-search form-control-feedback"></span>
 		     </form>
+		
 
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-							
-						</div>
-				</div>
-			</div>
+		<?php foreach ($komik as $key) { ;?>
 
-			<div class="col-xs-6 col-sm-3">
+				       <div class="col-xs-6 col-sm-3">
 				<div id="hover-cap-4col">
 						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
+							<center><img src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center"></center>
 							<p align="center">Tsuki ga michibiku isekai douchuu</p>
 						</div>
 				</div>
 			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-						</div>
-				</div>
-			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-						</div>
-				</div>
-			</div>
-			<br>
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-						</div>
-				</div>
-			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-						</div>
-				</div>
-			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-						</div>
-				</div>
-			</div>
-
-			<div class="col-xs-6 col-sm-3">
-				<div id="hover-cap-4col">
-						<div class="caption">
-							<center><img src="<?php echo base_url('assets/images/thumb_cover.jpg') ?>" class="img-responsive center"></center>
-							<p align="center">Tsuki ga michibiku isekai douchuu</p>
-						</div>
-				</div>
-			</div>
+				        <?php } ?>
 	</div>
 </div>
 </div>

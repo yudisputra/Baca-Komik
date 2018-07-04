@@ -20,8 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('homepage');
-
+		$this->load->model('home_model');
+		$data["komik"] = $this->home_model->list();
+		$this->load->view('homepage',$data);
 	}
 
 	public function contact()

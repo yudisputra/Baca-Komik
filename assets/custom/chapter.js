@@ -67,6 +67,12 @@ $(function() {
           width: 50
         },
         {
+          name: "tanggalrilis",
+          title: "Tanggal Rilis",
+          type: "date",
+          width: 50
+        },
+        {
           name: "fk_idkomik",
           title: "ID dari Komik",
           type: "text",

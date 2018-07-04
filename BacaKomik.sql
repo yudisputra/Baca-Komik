@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2018 at 07:27 AM
+-- Generation Time: Jul 04, 2018 at 09:27 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.0.24
 
@@ -41,12 +41,26 @@ CREATE TABLE `chapter` (
 --
 
 INSERT INTO `chapter` (`idchapter`, `judulchapter`, `volchapter`, `tanggalrilis`, `fk_idkomik`) VALUES
-(1, 'His Name Is Naruto', 1, '0000-00-00', 1),
-(2, 'Sang Pencabut Nyawa', 1, '0000-00-00', 2),
-(3, 'Holmes Jaman Heisei', 1, '0000-00-00', 3),
-(4, 'Untuk Dirimu 2000 tahun lagi', 1, '0000-00-00', 4),
-(5, 'Hari Keberangkatan', 1, '0000-00-00', 5),
-(6, 'Janji', 1, '0000-00-00', 6);
+(1, 'His Name Is Naruto', 1, '2007-10-19', 1),
+(2, 'Sang Pencabut Nyawa', 1, '2007-10-14', 2),
+(3, 'Holmes Jaman Heisei', 1, '2007-10-16', 3),
+(4, 'Untuk Dirimu 2000 tahun lagi', 1, '2011-01-24', 4),
+(5, 'Hari Keberangkatan', 1, '2007-10-17', 5),
+(6, 'Janji', 1, '2011-11-06', 6),
+(7, 'Konohamaru!', 2, '2007-10-19', 1),
+(8, 'Uchiha Sasuke', 3, '2007-10-19', 1),
+(9, 'Hatake Kakashi', 4, '2007-10-19', 1),
+(10, 'Kecerobohan adalah musuh terbesarmu', 5, '2007-10-19', 1),
+(11, 'Permulaan', 2, '2007-10-14', 2),
+(12, 'Orihime Inoue', 3, '2007-10-14', 2),
+(13, 'Detektif yang mengecil', 2, '2007-10-16', 3),
+(14, 'Detektif yang tak berguna', 3, '2007-10-16', 3),
+(15, 'Di Hari Itu', 2, '2011-01-24', 4),
+(16, 'Malam Perpisahan', 3, '2011-01-24', 4),
+(17, 'Di Dalam Badai', 2, '2007-10-17', 5),
+(18, 'Pertanyaan Terakhir', 3, '2007-10-17', 5),
+(19, 'Pertanyaan', 2, '2011-11-12', 6),
+(20, 'Yang Pertama', 3, '2011-11-22', 6);
 
 -- --------------------------------------------------------
 
@@ -100,7 +114,7 @@ ALTER TABLE `komik`
 -- AUTO_INCREMENT for table `chapter`
 --
 ALTER TABLE `chapter`
-  MODIFY `idchapter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idchapter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `komik`

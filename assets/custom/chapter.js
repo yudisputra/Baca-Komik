@@ -69,7 +69,7 @@ $(function() {
         {
           name: "tanggalrilis",
           title: "Tanggal Rilis",
-          type: "date",
+          type: "text",
           width: 50
         },
         {

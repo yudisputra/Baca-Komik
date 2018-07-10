@@ -30,19 +30,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Admin Page</a>
+            <a class="navbar-brand" href="#">Read Manga</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url('Admin/index'); ?>">Admin Komik</a></li>
-                <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Admin Chapter</a></li>
-                <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Komik</a></li>
+                <li><a href="<?php echo base_url('Welcome/index'); ?>">Home</a></li>
+                <li><a href="<?php echo base_url(); ?>/Welcome/detail/<?php echo $this->uri->segment(3)?>">Kembali ke Judul</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url('welcome/index'); ?>">Log Out</a></li>
+                <li><a href="<?php echo base_url('welcome/index'); ?>">Log in</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div>

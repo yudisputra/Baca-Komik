@@ -21,7 +21,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="">Daftar</a></li>
-				<li><a href="<?php echo base_url('admin/index'); ?>">Login</a></li>
+				<li><a href="<?php echo base_url('login/'); ?>">Login</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>

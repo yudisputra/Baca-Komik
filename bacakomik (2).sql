@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2018 at 05:22 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Jul 11, 2018 at 08:42 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.0.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -50,6 +52,7 @@ CREATE TABLE `chapter` (
   `judulchapter` varchar(255) NOT NULL,
   `volchapter` int(11) NOT NULL,
   `tanggalrilis` date NOT NULL,
+  `jum` int(11) NOT NULL,
   `fk_idkomik` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -57,28 +60,28 @@ CREATE TABLE `chapter` (
 -- Dumping data for table `chapter`
 --
 
-INSERT INTO `chapter` (`idchapter`, `judulchapter`, `volchapter`, `tanggalrilis`, `fk_idkomik`) VALUES
-(1, 'His Name Is Naruto', 1, '2007-10-19', 1),
-(2, 'Sang Pencabut Nyawa', 1, '2007-10-14', 2),
-(3, 'Holmes Jaman Heisei', 1, '2007-10-16', 3),
-(4, 'Untuk Dirimu 2000 tahun lagi', 1, '2011-01-24', 4),
-(5, 'Hari Keberangkatan', 1, '2007-10-17', 5),
-(6, 'Janji', 1, '2011-11-06', 6),
-(7, 'Konohamaru!', 2, '2007-10-19', 1),
-(8, 'Uchiha Sasuke', 3, '2007-10-19', 1),
-(9, 'Hatake Kakashi', 4, '2007-10-19', 1),
-(10, 'Kecerobohan adalah musuh terbesarmu', 5, '2007-10-19', 1),
-(11, 'Permulaan', 2, '2007-10-14', 2),
-(12, 'Orihime Inoue', 3, '2007-10-14', 2),
-(13, 'Detektif yang mengecil', 2, '2007-10-16', 3),
-(14, 'Detektif yang tak berguna', 3, '2007-10-16', 3),
-(15, 'Di Hari Itu', 2, '2011-01-24', 4),
-(16, 'Malam Perpisahan', 3, '2011-01-24', 4),
-(17, 'Di Dalam Badai', 2, '2007-10-17', 5),
-(18, 'Pertanyaan Terakhir', 3, '2007-10-17', 5),
-(19, 'Pertanyaan', 2, '2011-11-12', 6),
-(20, 'Yang Pertama', 3, '2011-11-22', 6),
-(21, 'Di Hamparan Sakura', 1, '2018-06-26', 7);
+INSERT INTO `chapter` (`idchapter`, `judulchapter`, `volchapter`, `tanggalrilis`, `jum`, `fk_idkomik`) VALUES
+(1, 'His Name Is Naruto', 1, '2007-10-19', 0, 1),
+(2, 'Sang Pencabut Nyawa', 1, '2007-10-14', 0, 2),
+(3, 'Holmes Jaman Heisei', 1, '2007-10-16', 0, 3),
+(4, 'Untuk Dirimu 2000 tahun lagi', 1, '2011-01-24', 0, 4),
+(5, 'Hari Keberangkatan', 1, '2007-10-17', 0, 5),
+(6, 'Janji', 1, '2011-11-06', 0, 6),
+(7, 'Konohamaru!', 2, '2007-10-19', 0, 1),
+(8, 'Uchiha Sasuke', 3, '2007-10-19', 0, 1),
+(9, 'Hatake Kakashi', 4, '2007-10-19', 0, 1),
+(10, 'Kecerobohan adalah musuh terbesarmu', 5, '2007-10-19', 0, 1),
+(11, 'Permulaan', 2, '2007-10-14', 0, 2),
+(12, 'Orihime Inoue', 3, '2007-10-14', 0, 2),
+(13, 'Detektif yang mengecil', 2, '2007-10-16', 0, 3),
+(14, 'Detektif yang tak berguna', 3, '2007-10-16', 0, 3),
+(15, 'Di Hari Itu', 2, '2011-01-24', 0, 4),
+(16, 'Malam Perpisahan', 3, '2011-01-24', 0, 4),
+(17, 'Di Dalam Badai', 2, '2007-10-17', 0, 5),
+(18, 'Pertanyaan Terakhir', 3, '2007-10-17', 0, 5),
+(19, 'Pertanyaan', 2, '2011-11-12', 0, 6),
+(20, 'Yang Pertama', 3, '2011-11-22', 0, 6),
+(21, 'Di Hamparan Sakura', 1, '2018-06-26', 81, 7);
 
 -- --------------------------------------------------------
 
@@ -106,7 +109,7 @@ INSERT INTO `komik` (`idkomik`, `namakomik`, `pengarang`, `status`, `ringkasan`,
 (4, 'Attack on Titan', 'Hajime Isayama', 'Belum Tamat', 'Di suatu zaman yang tidak diketahui, umat manusia hampir punah karena sebagian dari umat manusia dimangsa oleh sebuah makhluk yang bernama Titan. Titan itu sendiri sebenarnya adalah manusia yang bisa berubah wujud menjadi raksasa berkat Ymir, nenek moyang mereka yang melakukan perjanjian dengan iblis. Setelah kematian Ymir, kekuatan semua titan yang ada dalam diri Ymir terpecah jadi 9 titan. Keturunan Ymir semuanya bisa menjadi raksasa, tersambung nasib dan memorinya dan dinamakan Suku Ymir, dan mendirikan negara bernama Eldia. Walau akhirnya mereka menjauh dari peradaban dan mengasingkan diri ke Pulau Paradis, mendirikan tembok besar dan mengurung diri di dalam tembok. Raja mencuci otak seluruh suku Ymir sehingga mereka mengira umat manusia telah punah kecuali mereka. Suku selain Ymir yang ikut ke dalam tembok tidak ikut tercuci otaknya. Umat manusia yang tersisa bertahan hidup di dalam sebuah daerah yang dikelilingi oleh tiga lapis tembok yang bernama (dimulai dari yang terluar) Tembok Maria, Tembok Rose, dan Tembok Sina, masing-masing tembok memiliki tinggi sekitar 50 meter yang tak mungkin diraih Titan yang hanya memiliki tinggi maksimal 15m. Pada tahun 845, terjadi suatu hal yang mengejutkan, tiada angin tiada hujan tiba tiba muncul seorang Titan yang bertinggi 60m Titan itu adalah Titan Kolosal. Dengan mudahnya Titan Kolosal menghancurkan pintu yang berada pada Tembok Maria yang menyebabkan banyak Titan yang bertinggi 8-15m bisa masuk ke dalam Tembok Maria dengan mudah, Hal ini menyebabkan penduduk Tembok Maria harus mengungsi ke wilayah Tembok Rose.', 'aot.jpg'),
 (5, 'Hunter x Hunter', 'Yoshihiro Tagashi', 'Belum Tamat', 'Hunter x hunter adalah film anime serial , yang menceritakan tentang hunter , hunter adalah seseorang yang mempunyai kekuatan ten , ren , zatsu , hatsu jika 4 kekuatan itu digabungkan akan menjadi nen , seseorang dikatakan hunter secara resmi dikarnakan mempunyai lisensi hunter di anime ini menceritakan tentang anak kecil yang bernama gon yang mempunyai cita-cita menjadi pro hunter seperti ayahnya ging yang sudah menjadi pro hunter , saat petualangannya dimulai gon bertemu teman yaitu kurapika dari klan kurtaa dan leorio yang bercita-cita menjadi hunter dokter Saat dimulai nya ujian hunter gon bertemu teman lagi yaitu killua ia adalah anak dari pemburu bayaran yang tinggal di gunung tetapi gon belum menyadarinya , saat setelah lulus ujian hunter mereka ber empat gon , killua , kurapika , leorio melanjutkan petualangan mereka sebagai hunter Gon berencana mencari ayahnya apapun yang terjadi killia berencana mengikuti gon apapun alasannya kurapika berencana membunuh semua anggota genei ryodan\r\nleorio berencana menjadi dokter.', 'hxh.jpg'),
 (6, 'Nisekoi', 'Naoshi Komi', 'Belum Tamat', 'Nisekoi (????) adalah sebuah serial manga Jepang karya Naoshi Komi, yang mengisahkan tentang Raku Ichij?, seorang putra pemimpin yakuza, yang terpaksa harus berpacaran dengan putri pemimpin gangster untuk menghindari perang geng. Berawal dari sebuah One-s', 'Nisekoi_Volume_1.jpg'),
-(7, 'Eden Zero', 'Hiro Mashima', 'Belum Tamat', 'Eden''s Zero, sebuah komik fantasy dimana robot memiliki kesadaran layaknya manusia. Rebecca, seorang gading yang berpetualang suatu hari sampai di sebuah kerajaan bernama Kerajaan Granbell. Sudah 100 tahun sejak manusia terakhir datang di kerajaan tersebut. Hampir semua penduduk dikerajaan itu adalah robot, kecuali seorang anak bernama Shiki. Suatu hari, semua robot di kerajaan Grandbell berniat untuk membunuh Rebecca, apakah yang akan terjadi berikutnya?', 'Edens-Zero.jpg');
+(7, 'Eden Zero', 'Hiro Mashima', 'Belum Tamat', 'Eden\'s Zero, sebuah komik fantasy dimana robot memiliki kesadaran layaknya manusia. Rebecca, seorang gading yang berpetualang suatu hari sampai di sebuah kerajaan bernama Kerajaan Granbell. Sudah 100 tahun sejak manusia terakhir datang di kerajaan tersebut. Hampir semua penduduk dikerajaan itu adalah robot, kecuali seorang anak bernama Shiki. Suatu hari, semua robot di kerajaan Grandbell berniat untuk membunuh Rebecca, apakah yang akan terjadi berikutnya?', 'Edens-Zero.jpg');
 
 -- --------------------------------------------------------
 
@@ -166,21 +169,25 @@ ALTER TABLE `user`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `chapter`
 --
 ALTER TABLE `chapter`
   MODIFY `idchapter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
 -- AUTO_INCREMENT for table `komik`
 --
 ALTER TABLE `komik`
   MODIFY `idkomik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- Constraints for dumped tables
 --
@@ -190,6 +197,7 @@ ALTER TABLE `user`
 --
 ALTER TABLE `chapter`
   ADD CONSTRAINT `chapter_ibfk_1` FOREIGN KEY (`fk_idkomik`) REFERENCES `komik` (`idkomik`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

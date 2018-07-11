@@ -8,13 +8,13 @@
     <title>Baca Komik | Baca Komik Manga Terbaru</title>
 
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
         
     <style type="text/css">
       body {
@@ -98,41 +98,35 @@
     </style>
   </head>
 <body>
-	<div class="container" style="margin-top: 50px">
+  <div class="container" style="margin-top: 50px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
           <div class="panel panel-info">
             <div class="panel-heading">
-               <h3 class="panel-title">Daftar User</h3>
+               <h3 class="panel-title">Login User</h3>
             </div>
             <div class="panel-body">
-        <?php echo form_open('daftar_user/insert'); ?>
+        <?php echo form_open('login_user/cekLogin'); ?>
             <img class="profile-img" src="<?php echo base_url();?>assets/images/users.png"
                     alt="">
             <hr>
-          	<?php echo validation_errors()?>
+          <?php echo validation_errors()?>
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input type="text" class="form-control" placeholder="Username" id="username" name="username">
+                  <input type="text" class="form-control" placeholder="Username" id="namauser" name="namauser">
                 </div>
 
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input type="password" class="form-control" placeholder="Password" id="password" name="password">
                 </div>
-
-                <div class="form-group">
-                  <label for="nickname">Nickname</label>
-                  <input type="text" class="form-control" placeholder="Nickname" id="nickname" name="nickname">
-                </div>
-                <button type="submit" class="btn btn-large btn-primary">Daftar</button>
-                <button type="reset" class="btn btn-large btn-danger">Reset</button>
-                <hr>
-                <a href="<?php echo base_url('login_user/'); ?>"><p class="text-center" style="font-family: 'Roboto';">Jika punya akun , silahkan login</p></a>
-         	<?php echo form_close(); ?>
+                <button type="submit" class="btn btn-large btn-primary">Login</button>
+         <?php echo form_close(); ?>
             </div>
           </div>
         </div>
     </div> 
   </div>
+</center>
 </body>
+</html>

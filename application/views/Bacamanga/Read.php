@@ -1,8 +1,10 @@
 <?php $this->load->view('Bacamanga/baca_base_start');?>
 
-<?php
+<?php $no = 0; foreach ($komik as $key) {
+	$no = $key->jum;
+}
  
-	for($i = 1; $i <= 100; $i++)
+	for($i = 1; $i <= $no; $i++)
 	{ ?>
 
 	<center>

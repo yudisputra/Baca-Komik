@@ -21,9 +21,9 @@ class Baca extends CI_Controller {
 
 	public function komik($id,$ch)
 	{
-		// $data["judul"] = $id;
-		// $data["chapter"] = $ch;
-		$this->load->view('Bacamanga/Read');
+		$this->load->model('Baca_model');
+		$data["komik"] = $this->Baca_model->getkom($id,$ch);
+		$this->load->view('Bacamanga/Read',$data);
 	}
 
 }

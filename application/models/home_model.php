@@ -20,7 +20,7 @@ class home_model extends CI_Model {
 	{
  		 $this->db->where('fk_idkomik', $id);
  		 $query = $this->db->get('chapter');
-  		return $query->result();
+  		 return $query->result();
 	}
 
 	public function mangaterbaru()

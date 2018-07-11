@@ -42,7 +42,9 @@ class Welcome extends CI_Controller {
 
 	public function daftarManga()
 	{
-		$this->load->view('daftarManga');
+		$this->load->model('home_model');
+		$data['daftar'] = $this->home_model->daftar();
+		$this->load->view('daftarManga',$data);
 	}
 
 	public function chapterTerbaru()

@@ -29,6 +29,12 @@ class home_model extends CI_Model {
 		return $query->result();
 	}
 
+	public function daftar()
+	{
+		$query = $this->db->get('komik');
+		return $query->result();
+	}
+
 }
 
 /* End of file modelName.php */

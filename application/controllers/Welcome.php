@@ -54,5 +54,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('chapterTerbaru',$data);
 	}
 
+	public function tespage()
+	{
+		$this->load->view('admin/tespage');
+	}
+
 
 }

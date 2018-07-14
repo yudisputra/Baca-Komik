@@ -11,6 +11,8 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
     <script src="<?php echo base_url()?>assets/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>assets/jsgrid/jsgrid.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
             body {
                 font-family: 'Segoe UI';
@@ -36,9 +38,23 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url('Admin/index'); ?>">Admin Komik</a></li>
-                <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Admin Chapter</a></li>
-                <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Komik</a></li>
+
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Chapter<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Datatable Chapter</a></li>
+                    <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Chapter</a></li>                     
+                </ul>
+            </li>
+            
+
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Komik<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo base_url('Admin/index'); ?>">Datatable Komik</a></li>
+                    <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Komik</a></li>                     
+                </ul>
+            </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

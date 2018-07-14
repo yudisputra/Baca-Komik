@@ -38,21 +38,21 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-
+            
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Komik<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?php echo base_url('Admin/index'); ?>">Datatable Komik</a></li>
+                    <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Komik</a></li>
+                    <li><a href="<?php echo base_url('Admin/sinopsiscover'); ?>">Edit sinopsis dan Cover</a></li>                     
+                </ul>
+            </li>
+            
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Chapter<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Datatable Chapter</a></li>
                     <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Chapter</a></li>                     
-                </ul>
-            </li>
-            
-
-            <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Komik<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url('Admin/index'); ?>">Datatable Komik</a></li>
-                    <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Komik</a></li>                     
                 </ul>
             </li>
             </ul>

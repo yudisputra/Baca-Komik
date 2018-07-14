@@ -71,4 +71,19 @@ class Admin extends CI_Controller {
             }
         }
     }
+
+    public function sinopsiscover()
+    {
+        $this->load->model('admin_model'); 
+        $data['judulkomik']=$this->admin_model->getjudulkomik();
+        $this->load->view('admin/editsinopsis',$data);
+    }
+
+    public function ambiljudulsinopsis()
+    { 
+        $this->load->model('admin_model');
+        $data['judulkomik']=$this->admin_model->getjudulkomik();
+        $data['sinopsis']=$this->admin_model->getjudulkomikform();
+        $this->load->view('admin/editsinopsis',$data);
+    }
 }

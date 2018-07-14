@@ -20,8 +20,8 @@
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="">Daftar</a></li>
-				<li><a href="<?php echo base_url('login/'); ?>">Login</a></li>
+				<li><a href="<?php echo base_url('daftar_user/') ?>">Daftar</a></li>
+				<li><a href="<?php echo base_url('login_user/'); ?>">Login</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>

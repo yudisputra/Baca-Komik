@@ -31,8 +31,8 @@
 				<h4>Pembuat : <?php echo $key->pengarang?></h5>
 				<h4>Status : <?php echo $key->status?></h5>
 				<p>Ringkasan : <?php echo $key->ringkasan?></p>
-				<a href=""><button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Favorit </button></a>
+				<!--<a href="#"><button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Favorit </button></a>-->
 			</div>
 		<?php } ?>
 	</div>

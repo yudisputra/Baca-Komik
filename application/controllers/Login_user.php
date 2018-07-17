@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login_user extends CI_Controller {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('user_login');
+    }
+
 	public function index()
 	{
 		$this->load->view('user/u_login');	
@@ -10,27 +16,28 @@ class Login_user extends CI_Controller {
 
 	public function cekLogin()
     {
+        
         $this->load->library('form_validation');
         $this->form_validation->set_rules('namauser', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|callback_cekDb');
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('admin/admin_komik');
+            $this->load->view('user/u_login');
         } else {
-            redirect('admin','refresh');
+            redirect('welcome','refresh');
+            //redirect('user','refresh');
         }
     }
 
     public function cekDb($password)
     {
-      $this->load->model('user_login');
-      $username = $this->input->post('username'); 
+      $username = $this->input->post('namauser'); 
       $result = $this->user_login->login($username,$password);
       if($result){
         $session_array = array();
         foreach ($result as $key) {
             $session_array = array(
-                'iduser'=>$key->id,
-                'namauser'=>$key->username
+                'iduser'=>$key->iduser,
+                'namauser'=>$key->namauser
                 );
             $this->session->set_userdata('logged_in',$session_array);
             }
@@ -45,7 +52,7 @@ class Login_user extends CI_Controller {
         {
             $this->session->unset_userdata('logged_in');
             $this->session->sess_destroy();
-            redirect('u_login','refresh');
+            redirect('welcome','refresh');
         }
 
 }

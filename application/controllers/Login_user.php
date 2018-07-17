@@ -23,8 +23,8 @@ class Login_user extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('user/u_login');
         } else {
-            //redirect('welcome','refresh');
-            redirect('user','refresh');
+            redirect('welcome','refresh');
+            //redirect('user','refresh');
         }
     }
 
@@ -52,7 +52,7 @@ class Login_user extends CI_Controller {
         {
             $this->session->unset_userdata('logged_in');
             $this->session->sess_destroy();
-            redirect('user/u_login','refresh');
+            redirect('welcome','refresh');
         }
 
 }

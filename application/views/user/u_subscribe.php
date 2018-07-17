@@ -27,9 +27,10 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello , refly_ilham <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello , <?php echo $username; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('welcome/index'); ?>">Log Out</a></li>
+                        <li><a href="<?php echo base_url('welcome/index'); ?>">Homepage</a></li>
+                        <li><a href="<?php echo base_url('login_user/logout'); ?>">Log Out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -59,7 +60,7 @@
                             <a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik_favorite ?>">
                             <center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
                             <br>
-                            <a href="<?php echo site_url('subscribe/delete') ?>/<?=$key->idkomik_favorite?>/<?=$id?>"><button type="button" class="btn btn-lg btn-danger">Hapus</button></a>
+                            <center><a href="<?php echo site_url('subscribe/delete') ?>/<?=$key->idkomik_favorite?>/<?=$id?>"><button type="button" class="btn btn-danger">Hapus</button></a></center>
                         </div>
                 </div>
             </div>

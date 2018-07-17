@@ -1,3 +1,9 @@
+<?php 
+    $session_data = $this->session->userdata('logged_in');
+    $id = $session_data['iduser'];
+    $username = $session_data['namauser'];
+?>
+
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -18,11 +24,24 @@
 				<li><a href="<?php echo base_url('welcome/chapterTerbaru'); ?>">Chapter Terbaru</a></li>
 				<li><a href="<?php echo base_url('welcome/daftarManga'); ?>">Daftar Manga</a></li>
 			</ul>
-
+			<?php 
+			if (empty($id)) { ?>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo base_url('daftar_user/') ?>">Daftar</a></li>
 				<li><a href="<?php echo base_url('login_user/'); ?>">Login</a></li>
 			</ul>
+			<?php }else{ ?>
+			<ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello , <?php echo $username; ?> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo base_url('user/'); ?>">Dashboard</a></li>
+                        <li><a href="<?php echo base_url('login_user/logout'); ?>">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        <?php } ?>
 		</div><!-- /.navbar-collapse -->
 	</div>
 </nav>
+

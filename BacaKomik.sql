@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2018 at 08:42 AM
--- Server version: 10.1.28-MariaDB
--- PHP Version: 7.0.24
+-- Generation Time: Jul 17, 2018 at 05:50 PM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -86,6 +84,26 @@ INSERT INTO `chapter` (`idchapter`, `judulchapter`, `volchapter`, `tanggalrilis`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `favorit`
+--
+
+CREATE TABLE `favorit` (
+  `iduser` int(25) NOT NULL,
+  `idkomik_favorite` int(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `favorit`
+--
+
+INSERT INTO `favorit` (`iduser`, `idkomik_favorite`) VALUES
+(1, 7),
+(1, 6),
+(2, 7);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `komik`
 --
 
@@ -109,7 +127,7 @@ INSERT INTO `komik` (`idkomik`, `namakomik`, `pengarang`, `status`, `ringkasan`,
 (4, 'Attack on Titan', 'Hajime Isayama', 'Belum Tamat', 'Di suatu zaman yang tidak diketahui, umat manusia hampir punah karena sebagian dari umat manusia dimangsa oleh sebuah makhluk yang bernama Titan. Titan itu sendiri sebenarnya adalah manusia yang bisa berubah wujud menjadi raksasa berkat Ymir, nenek moyang mereka yang melakukan perjanjian dengan iblis. Setelah kematian Ymir, kekuatan semua titan yang ada dalam diri Ymir terpecah jadi 9 titan. Keturunan Ymir semuanya bisa menjadi raksasa, tersambung nasib dan memorinya dan dinamakan Suku Ymir, dan mendirikan negara bernama Eldia. Walau akhirnya mereka menjauh dari peradaban dan mengasingkan diri ke Pulau Paradis, mendirikan tembok besar dan mengurung diri di dalam tembok. Raja mencuci otak seluruh suku Ymir sehingga mereka mengira umat manusia telah punah kecuali mereka. Suku selain Ymir yang ikut ke dalam tembok tidak ikut tercuci otaknya. Umat manusia yang tersisa bertahan hidup di dalam sebuah daerah yang dikelilingi oleh tiga lapis tembok yang bernama (dimulai dari yang terluar) Tembok Maria, Tembok Rose, dan Tembok Sina, masing-masing tembok memiliki tinggi sekitar 50 meter yang tak mungkin diraih Titan yang hanya memiliki tinggi maksimal 15m. Pada tahun 845, terjadi suatu hal yang mengejutkan, tiada angin tiada hujan tiba tiba muncul seorang Titan yang bertinggi 60m Titan itu adalah Titan Kolosal. Dengan mudahnya Titan Kolosal menghancurkan pintu yang berada pada Tembok Maria yang menyebabkan banyak Titan yang bertinggi 8-15m bisa masuk ke dalam Tembok Maria dengan mudah, Hal ini menyebabkan penduduk Tembok Maria harus mengungsi ke wilayah Tembok Rose.', 'aot.jpg'),
 (5, 'Hunter x Hunter', 'Yoshihiro Tagashi', 'Belum Tamat', 'Hunter x hunter adalah film anime serial , yang menceritakan tentang hunter , hunter adalah seseorang yang mempunyai kekuatan ten , ren , zatsu , hatsu jika 4 kekuatan itu digabungkan akan menjadi nen , seseorang dikatakan hunter secara resmi dikarnakan mempunyai lisensi hunter di anime ini menceritakan tentang anak kecil yang bernama gon yang mempunyai cita-cita menjadi pro hunter seperti ayahnya ging yang sudah menjadi pro hunter , saat petualangannya dimulai gon bertemu teman yaitu kurapika dari klan kurtaa dan leorio yang bercita-cita menjadi hunter dokter Saat dimulai nya ujian hunter gon bertemu teman lagi yaitu killua ia adalah anak dari pemburu bayaran yang tinggal di gunung tetapi gon belum menyadarinya , saat setelah lulus ujian hunter mereka ber empat gon , killua , kurapika , leorio melanjutkan petualangan mereka sebagai hunter Gon berencana mencari ayahnya apapun yang terjadi killia berencana mengikuti gon apapun alasannya kurapika berencana membunuh semua anggota genei ryodan\r\nleorio berencana menjadi dokter.', 'hxh.jpg'),
 (6, 'Nisekoi', 'Naoshi Komi', 'Belum Tamat', 'Nisekoi (????) adalah sebuah serial manga Jepang karya Naoshi Komi, yang mengisahkan tentang Raku Ichij?, seorang putra pemimpin yakuza, yang terpaksa harus berpacaran dengan putri pemimpin gangster untuk menghindari perang geng. Berawal dari sebuah One-s', 'Nisekoi_Volume_1.jpg'),
-(7, 'Eden Zero', 'Hiro Mashima', 'Belum Tamat', 'Eden\'s Zero, sebuah komik fantasy dimana robot memiliki kesadaran layaknya manusia. Rebecca, seorang gading yang berpetualang suatu hari sampai di sebuah kerajaan bernama Kerajaan Granbell. Sudah 100 tahun sejak manusia terakhir datang di kerajaan tersebut. Hampir semua penduduk dikerajaan itu adalah robot, kecuali seorang anak bernama Shiki. Suatu hari, semua robot di kerajaan Grandbell berniat untuk membunuh Rebecca, apakah yang akan terjadi berikutnya?', 'Edens-Zero.jpg');
+(7, 'Eden Zero', 'Hiro Mashima', 'Belum Tamat', 'Eden''s Zero, sebuah komik fantasy dimana robot memiliki kesadaran layaknya manusia. Rebecca, seorang gading yang berpetualang suatu hari sampai di sebuah kerajaan bernama Kerajaan Granbell. Sudah 100 tahun sejak manusia terakhir datang di kerajaan tersebut. Hampir semua penduduk dikerajaan itu adalah robot, kecuali seorang anak bernama Shiki. Suatu hari, semua robot di kerajaan Grandbell berniat untuk membunuh Rebecca, apakah yang akan terjadi berikutnya?', 'Edens-Zero.jpg');
 
 -- --------------------------------------------------------
 
@@ -129,24 +147,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`iduser`, `namauser`, `password`, `nickname`) VALUES
-(1, 'Yudistira Eka Putra', 'f6441d3ffe756334505c5d2a0bfe5f9e', 'AdminYudis');
+(1, 'Yudistira Eka Putra', 'f6441d3ffe756334505c5d2a0bfe5f9e', 'AdminYudis'),
+(2, 'refly_ilham', '202cb962ac59075b964b07152d234b70', 'FlyFly');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `chapter`
---
-ALTER TABLE `chapter`
-  ADD PRIMARY KEY (`idchapter`),
-  ADD KEY `fk_idkomik` (`fk_idkomik`);
 
 --
 -- Indexes for table `komik`
@@ -165,40 +171,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `chapter`
---
-ALTER TABLE `chapter`
-  MODIFY `idchapter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `komik`
---
-ALTER TABLE `komik`
-  MODIFY `idkomik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `chapter`
---
-ALTER TABLE `chapter`
-  ADD CONSTRAINT `chapter_ibfk_1` FOREIGN KEY (`fk_idkomik`) REFERENCES `komik` (`idkomik`);
-COMMIT;
-
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

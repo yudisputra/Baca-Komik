@@ -52,7 +52,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin Chapter<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo base_url('Admin_chapter/index'); ?>">Datatable Chapter</a></li>
-                    <li><a href="<?php echo base_url('Admin/create'); ?>">Tambah Chapter</a></li>                     
+                    <li><a href="<?php echo base_url('Admin_chapter/ambiljudul'); ?>">Tambah Chapter</a></li>                     
                 </ul>
             </li>
             </ul>

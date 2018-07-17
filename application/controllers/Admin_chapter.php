@@ -36,4 +36,32 @@ class Admin_chapter extends CI_Controller {
         $this->load->model('admin_chap'); 
         $this->admin_chap->update();
     }
+
+    public function ambiljudul()
+    {
+        $this->load->model('admin_model'); 
+        $data['judulkomik']=$this->admin_model->getALLkomik();
+        $this->load->view('admin/admin_tambahchapter',$data);
+    }
+
+    public function insertchapter()
+    {
+           $this->load->model('admin_chap');
+           $this->load->library('upload');
+           $this->upload->initialize(array(
+            "upload_path"   => "./assets/images/",
+            "allowed_types" => "gif|jpg|png"
+            ));
+
+            if($this->upload->do_multi_upload("files")) 
+            {
+                // print_r($this->upload->get_multi_upload_data());
+                $this->admin_chap->insertchapterbaru();
+            }
+            else
+            {
+                $error = array('error'=> $this->upload->display_errors());
+                print_r($error);
+            }
+    }
 }

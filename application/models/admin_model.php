@@ -49,10 +49,24 @@ class admin_model extends CI_Model {
     public function getjudulkomikform()
     {
         $id    = $this->input->post('judulkomik'); 
-        $this->db->select('ringkasan,cover');
+        $this->db->select('ringkasan,cover,idkomik');
         $this->db->from('komik');
         $this->db->where('namakomik', $id);
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function getkomikno1()
+    {
+        $this->db->where('idkomik=1');
+        $query     = $this->db->get('komik');
+        return $query->result();
+    }
+
+    public function insertsinopsis($idkomik)
+    {
+         $object = array('ringkasan' => $this->input->post('ringkasan'),'cover' => $this->upload->data('file_name'));
+         $this->db->where('idkomik='.$idkomik)->update('komik', $object);
+    }
+
 }

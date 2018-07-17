@@ -76,6 +76,7 @@ class Admin extends CI_Controller {
     {
         $this->load->model('admin_model'); 
         $data['judulkomik']=$this->admin_model->getjudulkomik();
+        $data['sinopsis']=$this->admin_model->getkomikno1();
         $this->load->view('admin/editsinopsis',$data);
     }
 
@@ -85,5 +86,30 @@ class Admin extends CI_Controller {
         $data['judulkomik']=$this->admin_model->getjudulkomik();
         $data['sinopsis']=$this->admin_model->getjudulkomikform();
         $this->load->view('admin/editsinopsis',$data);
+    }
+
+     public function gantisinopsis($idkomik)
+    {
+        $this->load->model('admin_model');
+
+            $config['upload_path']      = './assets/images/cover';
+            $config['allowed_types']    = 'gif|jpg|png';
+            // $config['max_size']         = 100000000;
+            $config['max_width']        = 10240;
+            $config['max_height']       = 7680;
+
+            $this->load->library('upload',$config);
+
+            if(!$this->upload->do_upload('cover'))
+            {
+                $error = array('error'=> $this->upload->display_errors());
+                $this->load->view('admin/editsinopsis',$error);
+            }
+
+            else
+            {
+                $this->admin_model->insertsinopsis($idkomik);
+                $this->sinopsiscover();
+            }
     }
 }

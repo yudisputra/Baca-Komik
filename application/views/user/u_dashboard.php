@@ -3,6 +3,7 @@
     $id = $session_data['iduser'];
     $username = $session_data['namauser'];
 ?>
+
 <?php $this->load->view('user/u_base_start'); ?>
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">

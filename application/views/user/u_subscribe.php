@@ -1,4 +1,11 @@
+<?php 
+    $session_data = $this->session->userdata('logged_in');
+    $id = $session_data['iduser'];
+    $username = $session_data['namauser'];
+?>
+
 <?php $this->load->view('user/u_base_start'); ?>
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,7 +49,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class="panel panel-success">
-<div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Manga Terbaru</div>
+<div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Manga Favorite</div>
     <div class="panel-body">
         <?php foreach ($subscribe as $key) { ;?>
 
@@ -51,7 +58,8 @@
                         <div class="caption">
                             <a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik_favorite ?>">
                             <center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
-                            <h5 align="center"><?php echo $key->namakomik ?></h5></a>
+                            <br>
+                            <a href="<?php echo site_url('subscribe/delete') ?>/<?=$key->idkomik_favorite?>/<?=$id?>"><button type="button" class="btn btn-lg btn-danger">Hapus</button></a>
                         </div>
                 </div>
             </div>

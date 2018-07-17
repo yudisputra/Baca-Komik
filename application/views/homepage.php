@@ -1,5 +1,10 @@
-<?php $this->load->view('layout/base_start');?>
+<?php 
+    $session_data = $this->session->userdata('logged_in');
+    $id = $session_data['iduser'];
+    $username = $session_data['namauser'];
+?>
 
+<?php $this->load->view('layout/base_start');?>
 <div class="container-fluid">
 	<div class="jumbotron">
 		<div class="container">

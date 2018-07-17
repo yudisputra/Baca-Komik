@@ -1,3 +1,8 @@
+<?php 
+    $session_data = $this->session->userdata('logged_in');
+    $id = $session_data['iduser'];
+    $username = $session_data['namauser'];
+?>
 <?php $this->load->view('layout/base_start');?>
 <div class="container-fluid">
 	<div class="jumbotron">
@@ -31,8 +36,8 @@
 				<h4>Pembuat : <?php echo $key->pengarang?></h5>
 				<h4>Status : <?php echo $key->status?></h5>
 				<p>Ringkasan : <?php echo $key->ringkasan?></p>
-				<!--<a href="#"><button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Favorit </button></a>-->
+				<a href="<?php echo site_url('subscribe/insert') ?>/<?=$key->idkomik?>/<?=$id?>"><button type="button" class="btn btn-default btn-lg" aria-label="Left Align">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Favorit </button></a>
 			</div>
 		<?php } ?>
 	</div>

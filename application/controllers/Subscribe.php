@@ -17,6 +17,18 @@ class Subscribe extends CI_Controller {
 		$data['subscribe']=$this->subscribe_model->get_favorite($iduser);
 		$this->load->view('user/u_subscribe',$data);
 	}
+
+	public function insert($idkomik,$iduser)
+	{
+		$this->subscribe_model->addFavorite($iduser,$idkomik);
+		redirect('user','refresh');
+	}
+
+	public function delete($idkomik,$iduser)
+	{
+        $this->subscribe_model->deleteFavorite($iduser,$idkomik);
+        redirect('user','refresh');
+	}
 }
 
 /* End of file Subscribe.php */

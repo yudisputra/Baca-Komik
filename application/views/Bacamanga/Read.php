@@ -8,7 +8,7 @@
 	{ ?>
 
 	<center>
-    <img src="<?php echo site_url()?>assets/images/Manga/<?php echo $this->uri->segment(3)?>/<?php echo $this->uri->segment(4)?>/<?php echo $i?>.jpg">
+    <img class="img img-responsive" src="<?php echo site_url()?>assets/images/Manga/<?php echo $this->uri->segment(3)?>/<?php echo $this->uri->segment(4)?>/<?php echo $i?>.jpg">
 	</center>
 	<br>
  

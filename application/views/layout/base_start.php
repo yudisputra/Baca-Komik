@@ -18,13 +18,19 @@
 
       	<script type="text/javascript" class="init">
       	$(document).ready(function() {
-            $('#example').DataTable();
+            $('#example').DataTable( {
+            	"order": [[ 3, "desc" ]]
+            });
         });
       	</script>
       	
 		<style type="text/css">
 			body {
 				font-family: 'Segoe UI';
+			}
+			.navbar-default{
+			 border: none;
+			 background-color: #eceff1;
 			}
 		</style>
 	</head>

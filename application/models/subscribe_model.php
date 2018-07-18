@@ -28,6 +28,7 @@ class Subscribe_model extends CI_Model {
     	$this->db->where('idkomik_favorite', $idkomik);
         $this->db->delete('favorit');
     }
+  
 }
 
 /* End of file subscribe_model.php */

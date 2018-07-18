@@ -40,6 +40,9 @@
                 if (! empty($id)) { ?>
 				<a href="<?php echo site_url('subscribe/insert') ?>/<?=$key->idkomik?>/<?=$id?>"><button type="button" class="btn btn-success" aria-label="Left Align">
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambahkan Favorit </button></a>
+                <?php }else{ ?>
+                <button type="button" class="btn btn-danger" disabled="disabled" aria-label="Left Align">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambahkan Favorit </button>
                 <?php } ?>
 			</div>
 		<?php } ?>

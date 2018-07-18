@@ -52,7 +52,17 @@ class Admin_chapter extends CI_Controller {
            $this->load->model('admin_chap');
            $this->load->library('upload');
 
-           mkdir("./assets/images/Manga/".$idkomik."/".$volchapter);
+           $path = "./assets/images/Manga/".$idkomik;
+
+            if(!is_dir($path)) //create the folder if it's not already exists
+            {
+                mkdir($path,0755,TRUE);
+                // Here 0755 is permission of the folder to be created. 755 means you can do anything with the file or directory, and other users can read and execute it but not alter it. Suitable for programs and directories you want to make publicly available.
+            }
+            else
+            {
+                mkdir("./assets/images/Manga/".$idkomik."/".$volchapter);
+            }
 
            $this->upload->initialize(array(
             "upload_path"   => "./assets/images/Manga/".$idkomik."/".$volchapter,

@@ -20,8 +20,24 @@ class Subscribe extends CI_Controller {
 
 	public function insert($idkomik,$iduser)
 	{
-		$this->subscribe_model->addFavorite($iduser,$idkomik);
-		redirect('user','refresh');
+		$data = $this->subscribe_model->get_idfavorite($iduser);
+		
+		foreach ($data as $key) 
+		{
+			$idkomikanyar = $key->idkomik_favorite;
+
+			// var_dump($data['idkomiksudahada']);
+			if($idkomikanyar==$idkomik)
+			{
+				echo "<script>alert('Komik sudah tersubscribe !');
+							window.location.href='".site_url()."welcome';</script>";
+			}
+			else
+			{
+				$this->subscribe_model->addFavorite($iduser,$idkomik);
+				redirect('user','refresh');
+			}
+		}
 	}
 
 	public function delete($idkomik,$iduser)

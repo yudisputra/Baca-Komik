@@ -28,6 +28,11 @@ class Subscribe_model extends CI_Model {
     	$this->db->where('idkomik_favorite', $idkomik);
         $this->db->delete('favorit');
     }
+
+    function get_idfavorite($iduser){
+        $query = $this->db->query("Select idkomik_favorite FROM favorit WHERE iduser = ".$iduser);
+        return $query->result();
+    }
   
 }
 

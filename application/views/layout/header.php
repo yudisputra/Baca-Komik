@@ -36,6 +36,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello , <?php echo $username; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('user/'); ?>">Dashboard</a></li>
+                        <li><a href="<?php echo base_url('user/profile') ?>">Profile</a></li>
                         <li><a href="<?php echo base_url('login_user/logout'); ?>">Log Out</a></li>
                     </ul>
                 </li>

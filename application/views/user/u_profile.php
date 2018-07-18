@@ -23,14 +23,14 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('user/') ?>">Home</a></li>
-                <li class="active"><a href="<?php echo base_url('subscribe/') ?>">Subscribe Komik</a></li>
+                <li><a href="<?php echo base_url('subscribe/') ?>">Subscribe Komik</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello , <?php echo $username; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo base_url('welcome/index'); ?>">Homepage</a></li>
-                        <li><a href="<?php echo base_url('user/profile') ?>">Profile</a></li>
+                        <li><a href="<?php echo site_url('user/profile') ?>/<?=$id?>">Profile</a></li>
                         <li><a href="<?php echo base_url('login_user/logout'); ?>">Log Out</a></li>
                     </ul>
                 </li>
@@ -47,13 +47,34 @@
         </p>
     </div>
 </div>
+
+
+<div class="container">
+    <table class="table table-responsive table-hover">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Nickname</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($profile as $key) { ;?>
+            <tr>
+                <td><?php echo $key->namauser?></td>
+                <td><?php echo $key->nickname?></td>
+            </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+</div>
+
 <div class="container">
 <div class="container-fluid">
 <div class="row">
 <div class="panel panel-success">
 <div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Manga Favorite</div>
     <div class="panel-body">
-        <?php foreach ($subscribe as $key) { ;?>
+        <?php foreach ($favorit as $key) { ;?>
 
             <div class="col-xs-6 col-sm-3">
                 <div id="hover-cap-4col">
@@ -61,7 +82,6 @@
                             <a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik_favorite ?>">
                             <center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
                             <br>
-                            <center><a href="<?php echo site_url('subscribe/delete') ?>/<?=$key->idkomik_favorite?>/<?=$id?>"><button type="button" class="btn btn-danger">Hapus</button></a></center>
                         </div>
                 </div>
             </div>

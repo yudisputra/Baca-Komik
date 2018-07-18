@@ -33,6 +33,12 @@ class Subscribe_model extends CI_Model {
         $query = $this->db->query("Select idkomik_favorite FROM favorit WHERE iduser = ".$iduser);
         return $query->result();
     }
+
+    // function getProfile($id)
+    // {
+    //     $query = $this->db->query("Select * FROM user WHERE iduser = ".$id);
+    //     return $query->result();
+    // }
   
 }
 

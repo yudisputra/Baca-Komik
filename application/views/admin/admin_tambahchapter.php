@@ -25,7 +25,7 @@
 			<input type="date" class="form-control" id="tanggalrilis" name="tanggalrilis">
 			<br>
 			<div class="form-group">
-				<label for="">Cover Komik</label>
+				<label for="">Upload Chapter</label>
 				<input type="file" name="files[]" multiple />
 			</div>
 

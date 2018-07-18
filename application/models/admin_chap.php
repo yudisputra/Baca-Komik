@@ -42,7 +42,7 @@ class admin_chap extends CI_Model {
     {
         $data = $this->upload->get_multi_upload_data('file_name');   
         $jumlah = count($data);
-         $object = array('fk_idkomik' => $this->input->post('fk_idkomik'), 'volchapter' => $this->input->post('volchapter'), 'judulchapter' => $this->input->post('judulchapter'),'tanggalrilis' => $this->input->post('tanggalrilis'),'jum' => $jumlah);
+         $object = array('fk_idkomik' => $this->input->post('judulkomik'), 'volchapter' => $this->input->post('volchapter'), 'judulchapter' => $this->input->post('judulchapter'),'tanggalrilis' => $this->input->post('tanggalrilis'),'jum' => $jumlah);
          $this->db->insert('chapter', $object);
     }
 }

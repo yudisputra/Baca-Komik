@@ -51,6 +51,9 @@ class Admin_chapter extends CI_Controller {
 
            $this->load->model('admin_chap');
            $this->load->library('upload');
+
+           mkdir("./assets/images/Manga/".$idkomik."/".$volchapter);
+
            $this->upload->initialize(array(
             "upload_path"   => "./assets/images/Manga/".$idkomik."/".$volchapter,
             "allowed_types" => "gif|jpg|png"
@@ -59,8 +62,8 @@ class Admin_chapter extends CI_Controller {
             if($this->upload->do_multi_upload("files")) 
             {
                 // print_r($this->upload->get_multi_upload_data());
-                // $this->admin_chap->insertchapterbaru();
-                echo "hore";
+                $this->admin_chap->insertchapterbaru();
+                $this->index();
             }
             else
             {

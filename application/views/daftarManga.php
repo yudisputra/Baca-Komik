@@ -35,7 +35,7 @@
                 <td><?php echo $key->pengarang?></td>
                 <td><?php echo $key->status?></td>
                 <td><a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik ?>"><button type="button" class="btn btn-default" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Baca Komik </button></a></td>
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Detail Komik </button></a></td>
                 
             </tr>
             <?php } ?>

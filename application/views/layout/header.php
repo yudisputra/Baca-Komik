@@ -35,9 +35,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello , <?php echo $username; ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo base_url('user/'); ?>">Dashboard</a></li>
-                        <li><a href="<?php echo base_url('user/profile') ?>">Profile</a></li>
-                        <li><a href="<?php echo base_url('login_user/logout'); ?>">Log Out</a></li>
+                        <li><a href="<?php echo base_url('welcome/index'); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                        Homepage</a></li>
+                        <li><a href="<?php echo site_url('user/profile') ?>/<?=$id?>"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile</a></li>
+                        <li><a href="<?php echo base_url('login_user/logout'); ?>"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out</a></li>
                     </ul>
                 </li>
             </ul>

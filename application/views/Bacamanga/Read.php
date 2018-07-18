@@ -1,3 +1,4 @@
+
 <?php $this->load->view('Bacamanga/baca_base_start');?>
 
 <?php $no = 0; foreach ($komik as $key) {

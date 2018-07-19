@@ -14,8 +14,16 @@
 			<label for="">Nama Pengarang</label>
 			<input type="text" class="form-control" id="pengarang" name="pengarang">
 			<br>
+			<!-- <label for="">Status</label>
+			<input type="text" class="form-control" id="status" name="status"> -->
 			<label for="">Status</label>
-			<input type="text" class="form-control" id="status" name="status">
+			<select class="form-control" id="status" name="status">
+   		    <option value="Ongoing" name="fk_idkomik">Ongoing</option>
+   		    <option value="Complete" name="fk_idkomik">Complete</option>
+  			</select>
+			<br>
+			<label for="">Tanggal Rilis Komik</label>
+			<input type="date" class="form-control" id="tanggalkomik" name="tanggalkomik">
 			<br>
 			<label for="">Ringkasan</label>
 			<textarea name="ringkasan" id="ringkasan" class="form-control" rows="3"></textarea>

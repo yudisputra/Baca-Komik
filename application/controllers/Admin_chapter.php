@@ -56,7 +56,7 @@ class Admin_chapter extends CI_Controller {
 
             if(!is_dir($path)) //create the folder if it's not already exists
             {
-                mkdir($path,0755,TRUE);
+                mkdir($path);
                 // Here 0755 is permission of the folder to be created. 755 means you can do anything with the file or directory, and other users can read and execute it but not alter it. Suitable for programs and directories you want to make publicly available.
             }
             else

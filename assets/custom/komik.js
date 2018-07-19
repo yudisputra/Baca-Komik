@@ -72,6 +72,12 @@ $(function() {
           type: "text",
           width: 50
         },
+        {
+          name: "tanggalkomik",
+          title: "Tanggal Rilis Komik",
+          type: "text",
+          width: 50
+        },
          {
           name: "cover",
           title: "Alamat Cover",

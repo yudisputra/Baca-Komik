@@ -61,7 +61,8 @@ class Admin extends CI_Controller {
             if(!$this->upload->do_upload('cover'))
             {
                 $error = array('error'=> $this->upload->display_errors());
-                $this->load->view('admin/admin_tambahkomik',$error);
+                // $this->load->view('admin/admin_tambahkomik',$error);
+                print_r($error);
             }
 
             else

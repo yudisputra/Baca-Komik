@@ -35,6 +35,7 @@
 				<h4>Nama Komik : <?php echo $key->namakomik?></h5>
 				<h4>Pembuat : <?php echo $key->pengarang?></h5>
 				<h4>Status : <?php echo $key->status?></h5>
+                <h4>Tanggal Rilis : <?php echo $key->tanggalkomik?></h5>
 				<p>Ringkasan : <?php echo $key->ringkasan?></p>
                 <?php 
                 if (! empty($id)) { ?>

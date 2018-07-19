@@ -22,8 +22,8 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('home_model');
-		$data["komik"] = $this->home_model->index();
-		$data["chapter"] = $this->home_model->mangaterbaru();
+		$data["komik"] = $this->home_model->mangaterbaru();
+		$data["chapter"] = $this->home_model->chapterterbaru();
 		$this->load->view('homepage',$data);
 	}
 

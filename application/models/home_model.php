@@ -9,6 +9,12 @@ class home_model extends CI_Model {
   		 return $query->result();
 	}
 
+	public function mangaterbaru()
+	{
+		$query = $this->db->query("Select * FROM komik ORDER BY tanggalkomik DESC LIMIT 8");
+		return $query->result();
+	}
+
 	public function detail($id)
 	{
  		 $this->db->where('idkomik', $id);
@@ -23,7 +29,7 @@ class home_model extends CI_Model {
   		 return $query->result();
 	}
 
-	public function mangaterbaru()
+	public function chapterterbaru()
 	{
 		$query = $this->db->query("Select * from chapter as c INNER JOIN komik as k ON k.idkomik=c.fk_idkomik ORDER BY tanggalrilis DESC");
 		return $query->result();

@@ -6,6 +6,7 @@
 
 <?php $this->load->view('user/u_base_start'); ?>
 
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -49,61 +50,38 @@
     </div>
 </div>
 
-
 <div class="container">
-    <table class="table table-responsive table-hover">
-        <thead>
-            <tr>
-                <th>No.</th>
-                <th>Username</th>
-                <th>Nickname</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Tanggal Lahir</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($profile as $key) { $no = 1 ;?>
-            <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $key->namauser?></td>
-                <td><?php echo $key->nickname?></td>
-                <td><?php echo $key->email ?></td>
-                <td><?php echo $key->gender; ?></td>
-                <?php 
-                    $tglLahirinput = $key->tanggalLahir;
-                    $tglLahir = new DateTime($tglLahirinput);
-                    $date=$tglLahir->format('d M Y');
-                ?>
-                <td><?php echo $date; ?></td>
-                <td><a href="<?php echo site_url('')."user/update/".$key->iduser?>"><button type="button" class="btn btn-default">Update Profile</button></a></td>
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+			<?php foreach ($profil as $key) { ?>
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<?php echo form_open("user/update/".$key->iduser); ?>
+				<legend>Update Data Pegawai</legend>
+				<?php 
+					echo validation_errors(); 
+										
+				?>
+				<div class="form-group">
+					<label for="Username">Username</label>
+					<input type="text" class="form-control" id="username" name="username" value="<?php echo $key->namauser ?>">
+				</div>
+				<div class="form-group">
+					<label for="Nickname">Nickname</label>
+					<input type="text" class="form-control" id="nickname" name="nickname" value="<?php echo $key->nickname ?>">
+				</div>
+				<div class="form-group">
+					<label for="Email">Email</label>
+					<input type="text" class="form-control" id="email" name="email" value="<?php echo $key->email ?>">
+				</div>
+				<div class="form-group">
+					<label for="TanggalLahir">Tanggal Lahir</label>
+					<?php 	$tglLahirinput = $key->tanggalLahir;
+							$tglLahir = new DateTime($tglLahirinput);
+							$date=$tglLahir->format('d-m-Y'); ?>
+					<input type="text" class="form-control" id="tanggalLahir" name="tanggalLahir" value="<?php echo  $date ?>">
+				</div>
+				<?php } ?>
+				<button type="submit" class="btn btn-primary">Update</button>
+				<?php echo form_close(); ?>
+			</div>
 </div>
 
-<div class="container">
-<div class="container-fluid">
-<div class="row">
-<div class="panel panel-success">
-<div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Manga Favorite</div>
-    <div class="panel-body">
-        <?php foreach ($favorit as $key) { ;?>
-
-            <div class="col-xs-6 col-sm-3">
-                <div id="hover-cap-4col">
-                        <div class="caption">
-                            <a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik_favorite ?>">
-                            <center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
-                            <br>
-                        </div>
-                </div>
-            </div>
-                        <?php } ?>
-    </div>
-</div>
-</div>
-</div>
-</div>
+<br>

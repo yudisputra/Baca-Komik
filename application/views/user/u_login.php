@@ -121,6 +121,8 @@
                   <input type="password" class="form-control" placeholder="Password" id="password" name="password">
                 </div>
                 <button type="submit" class="btn btn-large btn-primary">Login</button>
+                <hr>
+                <a href="<?php echo base_url('daftar_user/') ?>"><p class="text-center">Belum Punya Akun ??</p></a>
          <?php echo form_close(); ?>
             </div>
           </div>

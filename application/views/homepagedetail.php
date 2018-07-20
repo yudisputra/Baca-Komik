@@ -22,7 +22,8 @@
 <div class="panel panel-success">
 <div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Detail Manga</div>
 	<div class="panel-body">
-		<?php foreach ($komik as $key) { ;?>
+		<?php foreach ($komik as $key) { 
+            $date = date("d-m-Y", strtotime($key->tanggalkomik)) ;?>
 
 			<div class="col-xs-6 col-sm-3">
 				<div id="hover-cap-4col">
@@ -35,7 +36,7 @@
 				<h4>Nama Komik : <?php echo $key->namakomik?></h5>
 				<h4>Pembuat : <?php echo $key->pengarang?></h5>
 				<h4>Status : <?php echo $key->status?></h5>
-                <h4>Tanggal Rilis : <?php echo $key->tanggalkomik?></h5>
+                <h4>Tanggal Rilis : <?php echo $date?></h5>
 				<p>Ringkasan : <?php echo $key->ringkasan?></p>
                 <?php 
                 if (! empty($id)) { ?>
@@ -68,11 +69,12 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($chapter as $key) { ;?>
+            <?php foreach ($chapter as $key) { 
+                 $date = date("d-m-Y", strtotime($key->tanggalrilis));?>
             <tr>
                 <td><?php echo $key->volchapter?></td>
                 <td><?php echo $key->judulchapter?></td>
-                <td><?php echo $key->tanggalrilis?></td>
+                <td><?php echo $date?></td>
                 <td><a href="<?php echo base_url()?>Baca/komik/<?php echo $key->fk_idkomik?>/<?php echo $key->volchapter?>"><button type="button" class="btn btn-default" aria-label="Left Align">
 					<span class="glyphicon glyphicon-book" aria-hidden="true"></span> Baca Komik </button></a></td>
             </tr>

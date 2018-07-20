@@ -34,7 +34,7 @@
 				<div id="hover-cap-4col">
 						<div class="caption">
 							<a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik ?>">
-							<center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
+							<center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 320px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
 							<h5 align="center"><?php echo $key->namakomik ?></h5></a>
 						</div>
 				</div>
@@ -61,12 +61,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($chapter as $key) { ;?>
+						<?php foreach ($chapter as $key) { 
+							 $date = date("d-m-Y", strtotime($key->tanggalrilis));?>
 			            <tr>
 			            	<td><?php echo $key->namakomik ?></td>
 			                <td><?php echo $key->judulchapter?></td>
 			                <td><?php echo $key->volchapter?></td>
-			                <td><?php echo $key->tanggalrilis?></td>
+			                <td><?php echo $date?></td>
 			                <td><a href="<?php echo base_url()?>Baca/komik/<?php echo $key->fk_idkomik?>/<?php echo $key->volchapter?>"><button type="button" class="btn btn-default" aria-label="Left Align">
 								<span class="glyphicon glyphicon-book" aria-hidden="true"></span> Baca Komik </button></a></td>
 			            </tr>

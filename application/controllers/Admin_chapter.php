@@ -67,7 +67,7 @@ class Admin_chapter extends CI_Controller {
 
            $this->upload->initialize(array(
             "upload_path"   => "./assets/images/Manga/".$idkomik."/".$volchapter,
-            "allowed_types" => "gif|jpg|png"
+            "allowed_types" => "gif|jpg|png|jpeg"
             ));
 
             if($this->upload->do_multi_upload("files")) 

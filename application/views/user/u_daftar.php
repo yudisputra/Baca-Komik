@@ -125,6 +125,27 @@
                   <label for="nickname">Nickname</label>
                   <input type="text" class="form-control" placeholder="Nickname" id="nickname" name="nickname">
                 </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" placeholder="Email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" name="gender" id="gender">
+                        <option value="Laki-laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                            <!--<input type="status" name="status" id="status" placeholder="Level" class="form-control">-->
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggalLahir">Tanggal Lahir</label>
+                    <input type="date" name="tanggalLahir" id="tanggalLahir" class="form-control" value="tanggalLahir" required="required" title="">
+                </div>
+
+
                 <button type="submit" class="btn btn-large btn-primary">Daftar</button>
                 <button type="reset" class="btn btn-large btn-danger">Reset</button>
                 <hr>

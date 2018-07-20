@@ -17,7 +17,9 @@ class Daftar_user extends CI_Controller {
 			$this->form_validation->set_rules('username', 'Username', 'trim|required');
 			$this->form_validation->set_rules('password', 'Password', 'trim|required');
 			$this->form_validation->set_rules('nickname', 'Nickname', 'trim|required');
-
+			$this->form_validation->set_rules('email', 'Email', 'trim|required');
+			$this->form_validation->set_rules('gender', 'Gender', 'trim|required');
+			$this->form_validation->set_rules('tanggalLahir', 'Tanggal Lahir', 'trim|required');
 			if ($this->form_validation->run()==false) {
 				redirect('login','refresh');
 			}else{

@@ -24,6 +24,26 @@ class User extends CI_Controller {
 		$this->load->view('user/u_profile',$data);
 	}
 
+	public function update($id)
+		{
+			$this->load->helper('url','form');
+			$this->load->library('form_validation');
+
+			$this->form_validation->set_rules('username', 'Username', 'trim|required');
+			$this->form_validation->set_rules('nickname', 'Nickname', 'trim|required');
+			$this->form_validation->set_rules('email', 'Email', 'trim|required');
+			$this->form_validation->set_rules('tanggalLahir', 'Tanggal Lahir', 'trim|required');
+
+
+			if ($this->form_validation->run()==false) {
+				$data['profil']=$this->profile_model->whereID($id);
+				$this->load->view('user/u_updatedata',$data);
+			}else{
+				$this->profile_model->updateProfil($id);
+				$this->load->view('user/u_dashboard');
+			}
+		}
+
 }
 
 /* End of file User.php */

@@ -18,6 +18,27 @@ class Profile_model extends CI_Model {
         return $query->result();
     }
 
+    public function updateProfil($id)
+        {   
+            $tglLahirinput = $this->input->post('tanggalLahir');
+            $tglLahir = new DateTime($tglLahirinput);
+            $date=$tglLahir->format('Y-m-d');
+
+            $object =  array(
+                'namauser' => $this->input->post('username'),
+                'nickname' => $this->input->post('nickname'),
+                'email' => $this->input->post('email'),
+                'tanggalLahir' => $date
+            );
+            $this->db->where('iduser=', $id);
+            $this->db->update('user', $object);
+        }   
+    public function whereID($id)
+        {
+            $query = $this->db->query("Select * FROM user WHERE iduser = ".$id);
+            return $query->result();
+        }
+
 
 }
 

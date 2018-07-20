@@ -50,7 +50,7 @@ class Welcome extends CI_Controller {
 	public function chapterTerbaru()
 	{
 		$this->load->model('home_model');
-		$data["chapter"] = $this->home_model->mangaterbaru();
+		$data["chapter"] = $this->home_model->chapterterbaru();
 		$this->load->view('chapterTerbaru',$data);
 	}
 

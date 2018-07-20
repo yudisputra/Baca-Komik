@@ -31,7 +31,7 @@ class home_model extends CI_Model {
 
 	public function chapterterbaru()
 	{
-		$query = $this->db->query("Select * from chapter as c INNER JOIN komik as k ON k.idkomik=c.fk_idkomik ORDER BY tanggalrilis DESC");
+		$query = $this->db->query("Select * from chapter as c INNER JOIN komik as k ON k.idkomik=c.fk_idkomik ORDER BY c.tanggalrilis DESC");
 		return $query->result();
 	}
 

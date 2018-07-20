@@ -62,12 +62,12 @@
 					</thead>
 					<tbody>
 						<?php foreach ($chapter as $key) { 
-							 $date = date("d-m-Y", strtotime($key->tanggalrilis));?>
+							?>
 			            <tr>
 			            	<td><?php echo $key->namakomik ?></td>
 			                <td><?php echo $key->judulchapter?></td>
 			                <td><?php echo $key->volchapter?></td>
-			                <td><?php echo $date?></td>
+			                <td><?php echo $key->tanggalrilis?></td>
 			                <td><a href="<?php echo base_url()?>Baca/komik/<?php echo $key->fk_idkomik?>/<?php echo $key->volchapter?>"><button type="button" class="btn btn-default" aria-label="Left Align">
 								<span class="glyphicon glyphicon-book" aria-hidden="true"></span> Baca Komik </button></a></td>
 			            </tr>

@@ -1,3 +1,9 @@
+<?php 
+    $session_data = $this->session->userdata('logged_in');
+    $id = $session_data['id'];
+    $username = $session_data['username'];
+?>
+
 <?php $this->load->view('admin/admin_base_start');?>
 
 <script type="text/javascript" src="<?php echo base_url()?>assets/custom/komik.js"></script>

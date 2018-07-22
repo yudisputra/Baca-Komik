@@ -7,12 +7,15 @@ class User extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('profile_model');
+		$this->load->model('home_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('user/u_dashboard');
+		$data['daftar'] = $this->home_model->daftar();
+		$this->load->view('user/u_dashboard',$data);
 	}
+
 
 	public function profile()
 	{

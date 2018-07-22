@@ -71,7 +71,7 @@ class Admin extends CI_Controller {
             }
         }
     }
-
+    
     public function sinopsiscover()
     {
         $this->load->model('admin_model'); 

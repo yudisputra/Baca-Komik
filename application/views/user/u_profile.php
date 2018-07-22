@@ -49,42 +49,41 @@
     </div>
 </div>
 
-
 <div class="container">
-    <table class="table table-responsive table-hover">
-        <thead>
-            <tr>
-                <th>No.</th>
-                <th>Username</th>
-                <th>Nickname</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th>Tanggal Lahir</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($profile as $key) { $no = 1 ;?>
-            <tr>
-                <td><?php echo $no++; ?></td>
-                <td><?php echo $key->namauser?></td>
-                <td><?php echo $key->nickname?></td>
-                <td><?php echo $key->email ?></td>
-                <td><?php echo $key->gender; ?></td>
+<div class="container-fluid">
+<div class="row">
+<div class="panel panel-success">
+<div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Detail Manga</div>
+    <div class="panel-body">
+        <?php foreach ($profile as $key) { ?>
+
+            <div class="col-xs-6 col-sm-3">
+                <div id="hover-cap-4col">
+                        <div class="caption">
+                            <img style="max-height: 500px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo base_url("assets/images/users.png") ?>" class="img-responsive center" width="100%">
+                        </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <h4>Nama Anda &nbsp;&nbsp;: <?php echo $key->namauser?></h5>
+                <h4>Nickname &nbsp;&nbsp;&nbsp;&nbsp; : <?php echo $key->nickname?></h5>
+                <h4>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;: <?php echo $key->email?></h5>
+                <h4>Jenis Kelamin : <?php echo $key->gender?></h5>
                 <?php 
                     $tglLahirinput = $key->tanggalLahir;
                     $tglLahir = new DateTime($tglLahirinput);
                     $date=$tglLahir->format('d M Y');
                 ?>
-                <td><?php echo $date; ?></td>
-                <td><a href="<?php echo site_url('')."user/update/".$key->iduser?>"><button type="button" class="btn btn-default">Update Profile</button></a></td>
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+                <h4>Tanggal Lahir : <?php echo $date; ?></h4>
+                <br>
+                <a href="<?php echo site_url('')."user/update/".$key->iduser?>"><button type="button" class="btn btn-default">Update Profile</button></a>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+</div>
 </div>
 
-<div class="container">
 <div class="container-fluid">
 <div class="row">
 <div class="panel panel-success">

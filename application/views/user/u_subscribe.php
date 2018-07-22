@@ -60,7 +60,8 @@
                 <div id="hover-cap-4col">
                         <div class="caption">
                             <a href="<?php echo base_url()?>welcome/detail/<?php echo $key->idkomik_favorite ?>">
-                            <center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></center>
+                            <center><img style="max-height: 300px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo site_url()?>assets/images/cover/<?php echo $key->cover?>" class="img-responsive center" width="100%"></a></center>
+                            <p class="text-center"><?php echo $key->namakomik; ?></p>
                             <br>
                             <center><a href="<?php echo site_url('subscribe/delete') ?>/<?=$key->idkomik_favorite?>/<?=$id?>"><button type="button" class="btn btn-danger">Hapus</button></a></center>
                         </div>

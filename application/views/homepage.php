@@ -23,11 +23,6 @@
 <div class="panel panel-success">
 <div class="panel-heading"><span class="glyphicon glyphicon-book"></span> Manga Terbaru</div>
 	<div class="panel-body">
-		    <form class="form-group has-feedback">
-		         <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
-		         <input type="text" class="form-control" id="inputSuccess5" placeholder="Search your manga ...">
-		         <span class="glyphicon glyphicon-search form-control-feedback"></span>
-		     </form>
 		<?php foreach ($komik as $key) { ;?>
 
 			<div class="col-xs-6 col-sm-3">

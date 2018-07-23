@@ -24,7 +24,7 @@ class Daftar_user extends CI_Controller {
 				redirect('login','refresh');
 			}else{
 					echo "<script>alert('Register Berhasil');
-							window.location.href='".site_url()."login';</script>";
+							window.location.href='".site_url()."login_user';</script>";
 					$this->user_daftar->insert();
 			}
 	}

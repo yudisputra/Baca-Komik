@@ -21,8 +21,16 @@ class Subscribe extends CI_Controller {
 	public function insert($idkomik,$iduser)
 	{
 		$data = $this->subscribe_model->get_idfavorite($iduser);
-		
-		foreach ($data as $key) 
+		var_dump($data);
+
+		if(empty($data))
+		{
+			$this->subscribe_model->addFavorite($iduser,$idkomik);
+			redirect('user','refresh');
+		}
+		else
+		{
+			foreach ($data as $key) 
 		{
 			$idkomikanyar = $key->idkomik_favorite;
 
@@ -38,6 +46,7 @@ class Subscribe extends CI_Controller {
 				redirect('user','refresh');
 			}
 		}
+		}		
 	}
 
 	public function delete($idkomik,$iduser)

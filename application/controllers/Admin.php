@@ -102,8 +102,11 @@ class Admin extends CI_Controller {
 
             if(!$this->upload->do_upload('cover'))
             {
-                $error = array('error'=> $this->upload->display_errors());
-                $this->load->view('admin/editsinopsis',$error);
+                // $error = array('error'=> $this->upload->display_errors());
+                // // $this->load->view('admin/editsinopsis',$error);
+                // print_r($error);
+                $this->admin_model->inserthanyasinopsis($idkomik);
+                $this->sinopsiscover();
             }
 
             else

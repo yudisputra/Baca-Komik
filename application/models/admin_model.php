@@ -69,4 +69,10 @@ class admin_model extends CI_Model {
          $this->db->where('idkomik='.$idkomik)->update('komik', $object);
     }
 
+    public function inserthanyasinopsis($idkomik)
+    {
+         $object = array('ringkasan' => $this->input->post('ringkasan'));
+         $this->db->where('idkomik='.$idkomik)->update('komik', $object);
+    }
+
 }

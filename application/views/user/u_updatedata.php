@@ -53,7 +53,7 @@
 <div class="container">
 			<?php foreach ($profil as $key) { ?>
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				<?php echo form_open("user/update/".$key->iduser); ?>
+				<?php echo form_open_multipart("user/update/".$key->iduser); ?>
 				<legend>Update Data Pegawai</legend>
 				<?php 
 					echo validation_errors(); 
@@ -78,6 +78,10 @@
 							$date=$tglLahir->format('d-m-Y'); ?>
 					<input type="text" class="form-control" id="tanggalLahir" name="tanggalLahir" value="<?php echo  $date ?>">
 				</div>
+                <div class="form-group">
+                <label for="">Ubah Foto Profil</label>
+                <input type="file" name="foto" size="20"/>
+                <br>
 				<?php } ?>
 				<button type="submit" class="btn btn-primary">Update</button>
 				<?php echo form_close(); ?>
@@ -85,3 +89,5 @@
 </div>
 
 <br>
+
+

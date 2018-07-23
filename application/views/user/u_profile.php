@@ -60,7 +60,7 @@
             <div class="col-xs-6 col-sm-3">
                 <div id="hover-cap-4col">
                         <div class="caption">
-                            <img style="max-height: 500px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo base_url("assets/images/users.png") ?>" class="img-responsive center" width="100%">
+                            <img style="max-height: 500px; display: block; margin: auto; width: 100%; overflow: hidden; padding: 0; max-width: 350px;" src="<?php echo base_url("assets/profil/$key->fotoprofile") ?>" class="img-responsive center" width="100%">
                         </div>
                 </div>
             </div>

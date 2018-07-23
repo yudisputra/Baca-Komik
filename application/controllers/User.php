@@ -42,8 +42,17 @@ class User extends CI_Controller {
 				$data['profil']=$this->profile_model->whereID($id);
 				$this->load->view('user/u_updatedata',$data);
 			}else{
+
+				$config['upload_path']      = './assets/profil';
+            	$config['allowed_types']    = 'gif|jpg|png';
+            	// $config['max_size']         = 100000000;
+            	$config['max_width']        = 10240;
+            	$config['max_height']       = 7680;
+
+            $this->load->library('upload',$config);
+				$this->upload->do_upload('foto');
 				$this->profile_model->updateProfil($id);
-				$this->load->view('user/u_dashboard');
+				$this->profile();
 			}
 		}
 

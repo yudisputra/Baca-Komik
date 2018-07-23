@@ -28,7 +28,8 @@ class Profile_model extends CI_Model {
                 'namauser' => $this->input->post('username'),
                 'nickname' => $this->input->post('nickname'),
                 'email' => $this->input->post('email'),
-                'tanggalLahir' => $date
+                'tanggalLahir' => $date,
+                'fotoprofile' => $this->upload->data('file_name')
             );
             $this->db->where('iduser=', $id);
             $this->db->update('user', $object);
